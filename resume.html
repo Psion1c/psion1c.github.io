@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakob Andrei Genson - Resume</title>
+    <style>
+
+        :root {
+            font-size: 16px;
+            
+            
+            --text-main: #333333;
+            --text-light: #666666;
+            --accent-color: #2c3e50;
+            --bg-body: #f4f4f4;
+            --bg-cv: #ffffff;
+            --link-color: #0077cc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            margin: 0;
+            padding: 2rem 0;
+            line-height: 1.5;
+        }
+
+        #cv {
+            background-color: var(--bg-cv);
+            width: 100%;
+            max-width: 60rem; /* approx 960px */
+            margin: 0 auto;
+            padding: 3rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--text-main);
+            font-weight: 700;
+            letter-spacing: -0.05rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            font-weight: 400;
+            margin-top: 0.5rem;
+        }
+
+        .two-sections {
+            display: grid;
+            grid-template-columns: 3fr 2fr; /* 60% Left, 40% Right */
+            column-gap: 3rem;
+        }
+        
+        .profile-image-container {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-image {
+            width: 80%; /* Adjusts to fit the sidebar column */
+            max-width: 150px;
+            border-radius: 50%; /* Makes the image circular */
+            border: 3px solid white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto; /* Centers the image */
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            color: var(--text-light);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 0.2rem 0;
+            color: var(--accent-color);
+        }
+
+        h4 {
+            font-size: 1rem;
+            font-weight: 400;
+            margin: 0 0 0.5rem 0;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        p, li {
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* LINK STYLING */
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            border-bottom: 1px dotted transparent;
+            transition: border-bottom 0.2s;
+        }
+
+        a:hover {
+            border-bottom: 1px solid var(--link-color);
+        }
+
+        .mb-2 { margin-bottom: 2rem; }
+        .date { float: right; font-size: 0.85rem; color: #888; font-weight: normal; }
+        
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            word-break: break-all; /* Prevents long emails from breaking layout */
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #eee;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* RESPONSIVE DESIGN (Mobile) */
+        @media screen and (max-width: 40rem) {
+            .two-sections {
+                grid-template-columns: 1fr; /* Stack columns */
+            }
+            #cv {
+                padding: 1.5rem;
+                width: 100%;
+                box-shadow: none;
+            }
+            .profile-image {
+                max-width: 120px; /* Smaller image on mobile */
+            }
+        }
+
+        /* PDF PRINT GENERATION STYLES */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            #cv {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+
+            html {
+                font-size: 14px; 
+            }
+            
+            h2 {
+                border-bottom: 1px solid #ccc;
+            }
+
+            a {
+                text-decoration: underline; 
+            }
+            
+            .profile-image {
+                box-shadow: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="cv">
+
+    <header>
+        <h1>Jakob Andrei Genson</h1>
+        <div class="subtitle">Software Developer</div>
+    </header>
+
+    <section class="two-sections">
+        
+        <div class="main-column">
+            
+            <div class="section mb-2">
+                <h2>Experience</h2>
+                
+                <div class="job-entry">
+                    <h3>Software Developer <span class="date">CPE 2201 - Software Design</span></h3>
+                    <h4>Event Management Platform (Node.js, MongoDB)</h4>
+                    <ul>
+                        <li>Architected a full-stack MVC application for managing events, utilizing Node.js and Express for a robust RESTful backend.</li>
+                        <li>Implemented secure user authentication and session management using bcryptjs and express-session, ensuring data privacy for attendees and managers.</li>
+                        <li>Integrated Multer for handling multi-part form data, enabling efficient storage and retrieval of user profile images and event banners.</li>
+                        <li>Designed dynamic, server-side rendered user interfaces using EJS, featuring flash messaging for real-time user feedback on actions.</li>
+                        <li>Modeled complex data relationships for Users, Events, and Notifications using Mongoose schemas to ensure data integrity across the platform.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section mb-2">
+                <h2>Education</h2>
+                
+                <div class="edu-entry mb-2">
+                    <h3>Bachelor of Science, Computer Engineering</h3>
+                    <h4>University of San Carlos <span class="date">01/2021 – Present</span></h4>
+                    <div>Cebu, Philippines</div>
+                </div>
+
+                <div class="edu-entry">
+                    <h3>Bachelor of Science, Computer Science</h3>
+                    <h4>University of San Carlos <span class="date">08/2020 – 12/2021</span></h4>
+                    <div>Cebu, Philippines</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="side-column">
+            
+            <div class="profile-image-container">
+                <img src="image_0.png" alt="Jakob Andrei Genson" class="profile-image">
+            </div>
+
+            <div class="section mb-2">
+                <h2>Contact</h2>
+                <ul class="contact-list">
+                    <li>
+                        <strong>Email:</strong><br> 
+                        <a href="mailto:jagenson.b@gmail.com">jagenson.b@gmail.com</a>
+                    </li>
+                    
+                    <li>
+                        <strong>Phone:</strong><br> +63 (916) 598-0009
+                    </li>
+                    
+                    <li>
+                        <strong>Location:</strong><br> Cebu, Philippines
+                    </li>
+                    
+                    <li>
+                        <strong>Links:</strong><br> 
+                        <a href="https://www.linkedin.com/in/YOUR_PROFILE_HERE" target="_blank">LinkedIn</a> / 
+                        <a href="https://github.com/YOUR_USERNAME_HERE" target="_blank">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section mb-2">
+                <h2>Skills</h2>
+                
+                <h3>Programming</h3>
+                <div class="skill-tags mb-2">
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                </div>
+
+                <h3>Web Development</h3>
+                <div class="skill-tags mb-2">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">MySQL</span>
+                </div>
+
+                <h3>DevOps & Tools</h3>
+                <div class="skill-tags mb-2">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">GitHub Actions</span>
+                    <span class="skill-tag">Jira</span>
+                </div>
+
+                <h3>Data Science</h3>
+                <div class="skill-tags mb-2">
+                    <span class="skill-tag">MATLAB</span>
+                    <span class="skill-tag">OpenCV</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">OpenAI</span>
+                </div>
+
+                <h3>Design</h3>
+                <div class="skill-tags mb-2">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">SketchUp</span>
+                    <span class="skill-tag">AutoCAD</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
