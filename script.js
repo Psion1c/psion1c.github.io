@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Typewriter effect
     const subtitle = document.querySelector('.subtitle');
     if (subtitle && subtitle.textContent.trim() === 'Software Developer') {
         const text = subtitle.textContent;
@@ -20,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         setTimeout(typeWriter, 500);
     }
-});
 
-const themeToggleBtn = document.getElementById('theme-toggle');
+    // Theme toggle
+    const themeToggleBtn = document.getElementById('theme-toggle');
     if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');
     }
@@ -39,21 +40,23 @@ const themeToggleBtn = document.getElementById('theme-toggle');
             }
         });
     }
-const skillTags = document.querySelectorAll('.skill-tag');
-    
-skillTags.forEach(tag => {
-    tag.style.cursor = 'pointer';
-        
-    tag.addEventListener('click', function() {
-        this.classList.toggle('active-skill');
-        if (this.classList.contains('active-skill')) {
-            this.style.backgroundColor = 'var(--accent-color)';
-            this.style.color = 'white';
-            this.style.transform = 'scale(1.1)';
-        } else {
-            this.style.backgroundColor = '';
-            this.style.color = '';
-            this.style.transform = '';
-         }
+
+    // Skill tags interaction
+    const skillTags = document.querySelectorAll('.skill-tag');
+    skillTags.forEach(tag => {
+        tag.style.cursor = 'pointer';
+            
+        tag.addEventListener('click', function() {
+            this.classList.toggle('active-skill');
+            if (this.classList.contains('active-skill')) {
+                this.style.backgroundColor = 'var(--accent-color)';
+                this.style.color = 'white';
+                this.style.transform = 'scale(1.1)';
+            } else {
+                this.style.backgroundColor = '';
+                this.style.color = '';
+                this.style.transform = '';
+            }
+        });
     });
-  });
+});
